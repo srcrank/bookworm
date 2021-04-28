@@ -1,0 +1,209 @@
+{
+    "users": [
+        {
+            "firstname": "Salma",
+            "lastname": "Crank",
+            "email": "salmacrank@gmail.com",
+            "id": 1,
+            "isAdmin": false
+        },
+        {
+            "firstname": "Lynnell",
+            "lastname": "Faich",
+            "email": "lfaich1@google.es",
+            "id": 2,
+            "isAdmin": false
+          }, {
+            "firstname": "Stephan",
+            "lastname": "Hehnke",
+            "email": "shehnke2@tumblr.com",
+            "id": 3,
+            "isAdmin": false
+          }, {
+            "firstname": "Nicola",
+            "lastname": "Jarmain",
+            "email": "njarmain3@ezinearticles.com",
+            "id": 4,
+            "isAdmin": false
+          }, {
+            "firstname": "Valentia",
+            "lastname": "Wiltshier",
+            "email": "vwiltshier4@sogou.com",
+            "id": 5,
+            "isAdmin": false
+          }, {
+            "firstname": "Ollie",
+            "lastname": "Aps",
+            "email": "oaps5@cbslocal.com",
+            "id": 6,
+            "isAdmin": false
+          }, {
+            "firstname": "Blane",
+            "lastname": "Eggleson",
+            "email": "beggleson6@timesonline.co.uk",
+            "id": 7,
+            "isAdmin": false
+          }, {
+            "firstname": "Byram",
+            "lastname": "Paaso",
+            "email": "bpaaso7@eventbrite.com",
+            "id": 8,
+            "isAdmin": false
+          }, {
+            "firstname": "Susanetta",
+            "lastname": "Cutriss",
+            "email": "scutriss8@barnesandnoble.com",
+            "id": 9,
+            "isAdmin": false
+          }, {
+            "firstname": "Ulrick",
+            "lastname": "Castaner",
+            "email": "ucastaner9@si.edu",
+            "id": 10,
+            "isAdmin": false
+          }, {
+            "firstname": "Brody",
+            "lastname": "Pistol",
+            "email": "bpistola@prlog.org",
+            "id": 11
+          }, {
+            "firstname": "Arman",
+            "lastname": "Gration",
+            "email": "agrationb@reddit.com",
+            "id": 12,
+            "isAdmin": false
+          }, {
+            "firstname": "Marcile",
+            "lastname": "Lewsy",
+            "email": "mlewsyc@google.de",
+            "id": 13,
+            "isAdmin": false
+          }, {
+            "firstname": "Dominica",
+            "lastname": "Glave",
+            "email": "dglaved@privacy.gov.au",
+            "id": 14,
+            "isAdmin": false
+          },
+          {
+            "firstname": "Admin",
+            "lastname": "Admin",
+            "email": "admin@bookworm.com",
+            "id": 15,
+            "isAdmin": true
+          }         ​
+          
+    ],
+    "goals": [
+
+    ],
+    "recommend": [
+
+    ],
+    "library": [
+
+    ],
+    "bookdata": [
+        {
+            "title": "A Strange Country",
+            "author": "Muriel Barbery",
+            "id": 1
+        },{
+            "title": "Go, Went, Gone",
+            "author": "Jenny Erpenbeck",
+            "id": 2
+        },{
+            "title": "Educated",
+            "author": "Tara Westover",
+            "id": 3
+        },{
+            "title": "Cat's Eye",
+            "author": "Margaret Atwood",
+            "id": 4
+        },{
+            "title": "Sputnik Sweetheart",
+            "author": "Haruki Murakami",
+            "id": 5
+        },{
+            "title": "Commonwealth",
+            "author": "Ann Patchett",
+            "id": 6
+        },{
+            "title": "Life After Life",
+            "author": "Kate Atkinson",
+            "id": 7
+        },{
+            "title": "In Cold Blood",
+            "author": "Truman Capote",
+            "id": 8
+        },{
+            "title": "East of Eden",
+            "author": "John Steinbeck",
+            "id": 9
+        },{
+            "title": "Normal People",
+            "author": "Sally Rooney",
+            "id": 10
+        },{
+            "title": "Little Fires Everywhere",
+            "author": "Celeste Ng",
+            "id": 11
+        },{
+            "title": "The Bluest Eye",
+            "author": "Toni Morrison",
+            "id": 12
+        },{
+            "title": "Song of Solomon",
+            "author": "Toni Morrison",
+            "id": 13
+        },{
+            "title": "To Kill A Mockingbird",
+            "author": "Harper Anderson",
+            "id": 14
+        },{
+            "title": "The Spirit Catches You and You Fall Down",
+            "author": "Anne Fadiman",
+            "id": 15
+        },{
+            "title": "Midaq Alley",
+            "author": "Naguib Mafouz",
+            "id": 16
+        },{
+            "title": "Catch-22",
+            "author": "Joseph Heller",
+            "id": 17
+        },{
+            "title": "The Joy Luck CLub",
+            "author": "Amy Tan",
+            "id": 18
+        },{
+            "title": "The Unbearable Lightness of Being",
+            "author": "Milan Kundera",
+            "id": 19
+        },{
+            "title": "Pride and Prejudice",
+            "author": "Jane Austen",
+            "id": 20
+        },{
+            "title": "The Remains of the Day",
+            "author": "Kazuo Ishiguro",
+            "id": 21
+        },{
+            "title": "Catcher in the Rye",
+            "author": "J.D. Salinger",
+            "id": 22
+        },{
+            "title": "Black Boy",
+            "author": "Richard Wright",
+            "id": 23
+        },{
+            "title": "One Hundred Years of Solitude",
+            "author": "Gabriel Garcia Marquez",
+            "id": 24
+        },{
+            "title": "The Complete Stories",
+            "author": "Flannery O'Conner",
+            "id": 25
+        }
+    ]
+}
