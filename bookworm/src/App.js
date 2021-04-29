@@ -1,25 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route, Redirect } from "react-router-dom"
+import { NavBar } from "./components/nav/NavBar"
+import { Login } from "./components/auth/Login"
+import { Register } from "./components/auth/Register"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hi there!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const Bookworm = () => (
+  <>
+  <Route
+    render={() => {
+      if (sessionStorage.getItem("bookworm_user")) {
+        return (
+          <>
+            <NavBar />
+          </>  
+        )
+      } else {
+        return <Redirect to="/login" />
+      }
+    }}
+    />
 
-export default App;
+
+  <Route path="/login">
+      <Login />
+    </Route>
+    <Route path="/register">
+      <Register />
+    </Route>
+  </>
+)
