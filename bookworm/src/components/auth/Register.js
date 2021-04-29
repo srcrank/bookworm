@@ -5,7 +5,7 @@ import "./Login.css"
 
 export const Register = () => {
 
-    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "" })
+    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "", isAdmin: "false" })
     const [conflictDialog, setConflictDialog] = useState(false)
 
     const history = useHistory()
