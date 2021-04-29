@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, Redirect } from "react-router-dom"
 import { NavBar } from "./components/nav/NavBar"
+import { ApplicationViews } from "./components/ApplicationViews"
 import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register"
 
@@ -10,6 +11,7 @@ export const Bookworm = () => (
   <Route
     render={() => {
       if (sessionStorage.getItem("bookworm_user")) {
+        console.log(sessionStorage.getItem("bookworm_user"))
         return (
           <>
             <NavBar />
