@@ -1,3 +1,10 @@
-nav-bar {
-    background-color: green;
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+
+.navbar__item {
+    flex-basis: 20%;
+    list-style-type: none;
 }

@@ -5,7 +5,7 @@ import "./Login.css"
 
 export const Register = () => {
 
-    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "", isAdmin: "false" })
+    const [registerUser, setRegisterUser] = useState({ })
     const [conflictDialog, setConflictDialog] = useState(false)
 
     const history = useHistory()
@@ -35,8 +35,11 @@ export const Register = () => {
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
+                            firstName: `${registerUser.firstName}`,
+                            lastName: `${registerUser.lastName}`,
                             email: registerUser.email,
-                            name: `${registerUser.firstName} ${registerUser.lastName}`
+                            isAdmin: false
+
                         })
                     })
                         .then(res => res.json())
