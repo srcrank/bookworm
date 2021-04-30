@@ -44,7 +44,7 @@ export const Goals = () => {
     return (
         <>
             <div className="goalContainer-Cards">
-                {Goals.map(goals => 
+                {Goals.map(goal => 
                     <GoalCard key={goal.id} goal={goal} handleCompleteGoal={handleCompleteGoal} handleDeleteGoal={handleDeleteGoal} 
                     />)}
             </div>
