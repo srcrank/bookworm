@@ -15,6 +15,7 @@ export const Bookworm = () => (
         return (
           <>
             <NavBar />
+            <ApplicationViews />
           </>  
         )
       } else {

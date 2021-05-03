@@ -25,11 +25,11 @@ export const GoalCard = ({ goal, handleDeleteGoal, handleCompleteGoal }) => {
              :<p>Completion Goal: {goal.completion}</p>
             }
             {goal.userId === currentUser && goal.isCompleted === false
-             ? <button type="button" onClick={() => history.push(`/goals/${goal.id}/edit`)}> Edit </button>
+             ? <button type="button" onClick={() => history.push(`/goals/${goal.id}/edit`)}> ~ edit </button>
              : ""
             }
             {goal.userId === currentUser
-             ? <button type="button" onClick={() => handleDeleteGoal(goal.id)}>Delete</button>
+             ? <button type="button" onClick={() => handleDeleteGoal(goal.id)}> - delete</button>
              : ""
             }
             {goal.userId === currentUser && goal.isCompleted === false

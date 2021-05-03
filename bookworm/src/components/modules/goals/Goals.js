@@ -12,6 +12,7 @@ export const Goals = () => {
 
     const currentUser = JSON.parse(sessionStorage.getItem("bookworm_user"))
 
+    //goals from the api
     const getGoals = () => {
         return getAllGoals()
             .then(goalsFromAPI => {
@@ -19,11 +20,13 @@ export const Goals = () => {
             });
     };
 
+    //delete goals button
     const handleDeleteGoal = (id) => {
         deleteGoal(id)
             .then(() => getAllGoals().then(setGoals))
     };
 
+    //switch goal from incomplete to complete. Is this where I might be able to push the goals to a separate tab for completed goals?
     const handleCompleteGoal = (goal => {
         let incompleteGoal = {...goal}
         const completeGoal = {
