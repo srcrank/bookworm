@@ -1,7 +1,6 @@
 //displays books added to library by putting book data into a card. 
 
 import React from "react";
-import "./Goals.css"
 import { useHistory } from "react-router-dom"
 
 export const LibraryCard = ({ libItem, handleDeleteBookInLib }) => { 
@@ -13,8 +12,8 @@ export const LibraryCard = ({ libItem, handleDeleteBookInLib }) => {
     return (
     <div className="library-card">
     <div className="libraryCard-content">
-        <span className="card-articleName">{bookdata.title}</span>
-            <p>{bookdata.author}</p>
+        <span className="card-articleName">{libItem.title}</span>
+            <p>{libItem.author}</p>
             <select name="status" className="status-dropdown">
                 <option value="reading">reading</option>
                 <option value="completed">completed</option>

@@ -8,21 +8,22 @@ export const Library = () => {
 
     const history = useHistory();
 
+
     const getLibrary = () => {
-        return getAllArticles()
-            .then(articlesFromAPI => {
-                setArticles(articlesFromAPI)
+        return getAllBooks()
+            .then(booksFromAPI => {
+                setLib(booksFromAPI)
             });
     };
 
-    const handleDeleteArticle = (id) => {
-        deleteArticle(id)
-            .then(() => getAllArticles()
-                .then(setArticles))
+    const handleDeleteLibItem = (id) => {
+        deleteBookInLib(id)
+            .then(() => getAllBooks()
+                .then(setLib))
     };
 
     useEffect(() => {
-        getArticles();
+        getLibrary();
     }, []);
 
     return (
@@ -31,15 +32,15 @@ export const Library = () => {
             <section className="section-content">
                 <button type="button"
                     className="btn"
-                    onClick={() => { history.push("/articles/create") }}>
-                    Add Article
+                    onClick={() => { history.push("/library/add") }}>
+                    + book
                 </button>
             </section>
 
 
             <div className="conatiner-cards">
-                {articles.map(library =>
-                    <LibraryCard key={article.id} article={article} handleDeleteArticle={handleDeleteArticle} />)}
+                {libItems.map(library =>
+                    <LibraryCard key={library.id} article={library} handleDeleteArticle={handleDeleteLibItem} />)}
             </div>
         </>
     )
