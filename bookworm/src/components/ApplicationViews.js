@@ -4,6 +4,8 @@ import { Route } from "react-router-dom"
 import { Goals } from "./modules/goals/Goals"
 import { GoalForm } from "./modules/goals/GoalsForm"
 import { GoalEditForm } from "./modules/goals/GoalEditForm"
+import { RecList } from "./modules/recommend/RecommendForum"
+import { RecForm } from "./modules/recommend/RecForm"
 
 
 export const ApplicationViews = () => {
@@ -18,6 +20,13 @@ export const ApplicationViews = () => {
           </Route>
           <Route path="/goals/:goalId(\d+)/edit">
             <GoalEditForm />
+          </Route>
+
+          <Route exact path="/recommend">
+            <RecList />
+          </Route>
+          <Route exact path="/recommend/add">
+            <RecForm />
           </Route>
 
 
