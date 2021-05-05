@@ -5,6 +5,12 @@ import { Goals } from "./modules/goals/Goals"
 import { GoalForm } from "./modules/goals/GoalsForm"
 import { GoalEditForm } from "./modules/goals/GoalEditForm"
 
+import { RecList } from "./modules/recommend/RecommendForum"
+import { RecForm } from "./modules/recommend/RecForm"
+import { RecEditForm } from "./modules/recommend/RecEditForm"
+
+
+
 
 export const ApplicationViews = () => {
     return (
@@ -18,6 +24,16 @@ export const ApplicationViews = () => {
           </Route>
           <Route path="/goals/:goalId(\d+)/edit">
             <GoalEditForm />
+          </Route>
+
+          <Route exact path="/recommend">
+            <RecList />
+          </Route>
+          <Route exact path="/recommend/add">
+            <RecForm />
+          </Route>
+          <Route exact path="/recommend/:recId(\d+)/edit">
+            <RecEditForm />
           </Route>
 
 
