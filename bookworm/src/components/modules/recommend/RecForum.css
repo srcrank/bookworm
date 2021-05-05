@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #FFEADF;
+}
+
+.recContainer-Cards {
+    display: flex;
+    padding: 0;
+    margin: 20%;
+    margin-top: 5em;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFAAAB;
+    border-radius: 2em;
+}
+
+.recScreen {
+    background-color: white;
+    margin-left: 2em;
+    margin-top: 2em;
+    margin-bottom: 10em;
+    margin-right: 2em;
+    padding: 5em;
+    padding-left: 10em;
+    padding-right: 10em;
+    border-radius: 2em;
+    height: 20em;
+    overflow: auto;
+    /* display: flex; */
+
+}
