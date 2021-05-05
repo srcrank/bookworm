@@ -45,13 +45,9 @@ export const RecForm = () => {
             <h3 className="recForm-title">
                 have a recommendation?
             </h3>
-            <fieldset>
-                <div className="form-area"></div>
-                <fieldset>
-                    <textarea type="textarea" id="message" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="say something!" />
-                </fieldset>
-            </fieldset>
-            <button className="btn btn-primary" onClick={handleClickSaveRec} disabled={isLoading}>
+        <textarea type="textarea" id="message" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="say something!" />
+            
+        <button className="btn btn-primary" onClick={handleClickSaveRec} disabled={isLoading}>
                 recommend!
                 </button>
 
