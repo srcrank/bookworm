@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { deleteRec, getAllRecommendations } from '../../../data/RecommendManager'
 import { RecCard } from './RecCard'
+import { RecForm } from './RecForm'
 import './RecForum.css'
 
 export const RecList = () => {
@@ -32,11 +33,12 @@ export const RecList = () => {
                    <RecCard key={rec.id} message={rec} handleDeleteRec={handleDeleteRec} />
                     )}
               </div>
-              <section className="section-content">
+              <div className="section-content">
+                  
                 <button type="button" className="btn" onClick={() => { history.push("/recommend/add")}}>
                     + recommend
                 </button>
-            </section>
+            </div>
             </div>            
         </>
     )
