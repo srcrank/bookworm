@@ -22,16 +22,14 @@ export const RecCard = ({message, handleDeleteRec}) => {
             <div className="nameplate">
                 {message.user.id !== currentUser
                     ?<>
-                    <h2 className="card-name">{message.user.name}</h2>
-                    {/* <h2 className="timestamp">@{recHour}{recSun}:</h2> */}
-                    <space></space>
-                    <h1 className="message">{message.message}</h1>
+                    <h4 className="card-name">{message.user.firstname} {message.user.lastname}:</h4>
+                    {/* <h4 className="timestamp">@{recHour}{recSun}:</h4> */}
+                    <span className="message">{message.message}</span>
                     </>
                     :<>
-                    <h2 className="card-username">{message.user.name}</h2>
-                    {/* <h2 className="timestamp">@{recHour}{recSun}:</h2> */}
-                    <space></space>
-                    <h1 className="userMessage">{message.message}</h1>
+                    <h4 className="card-username">{message.user.firstname} {message.user.lastname}:</h4>
+                    {/* <h4 className="timestamp">@{recHour}{recSun}:</h4> */}
+                    <span className="userMessage">{message.message}</span>
                     </>
                 }
                 </div>
