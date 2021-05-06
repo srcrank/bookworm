@@ -1,0 +1,7 @@
+.goal-card {
+    display: flex;
+    background-color: #FFAAAB;
+    margin: 5em;
+    border-radius: 2em;
+    padding: 2em;
+}
