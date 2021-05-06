@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
+import "./BKWRMlogo.png"
 
 export const NavBar = () => {
   return (
@@ -11,9 +12,6 @@ export const NavBar = () => {
             <li className="navbar__item">
                 <Link className="navbar__link" to="/library">My Library</Link>
             </li>
-            <div>
-                <img src="./BKWRMlogo.png" className="img-fluid" alt="" />
-            </div>
             <li className="navbar__item">
                 <Link className="navbar__link" to="/recommend">Recommend</Link>
             </li>
