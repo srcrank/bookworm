@@ -12,4 +12,5 @@ export const getAllUsers = () => {
 export const getUserById = (id) => {
     //gets the user by a specific ID
     return fetch (`${remoteURL}/users/${id}`)
+    .then(res => res.json())
 }
