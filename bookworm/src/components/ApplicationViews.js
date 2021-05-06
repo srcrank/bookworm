@@ -36,7 +36,7 @@ export const ApplicationViews = () => {
             <RecEditForm />
           </Route>
 
-          <Route exact path= "/books">
+          <Route exact path= "/bookdata">
             <BookList />
           </Route>
 

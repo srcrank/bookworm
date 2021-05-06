@@ -38,10 +38,10 @@ export const BookList = () => {
       </section>
 
       <div className="container-bookCards">
-        {books.map((event, index) => (
+        {books.map((book, index) => (
           <BookCard
-            key={event.id}
-            event={event}
+            key={book.id}
+            book={book}
             handleDeleteEvent={handleDeleteBooks}
             index={index}
           />
