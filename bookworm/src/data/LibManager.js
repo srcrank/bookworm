@@ -1,20 +1,8 @@
 const remoteURL = "http://localhost:8088"
 
-//fetches books by their ID
-export const getBookById = (id) => {
-    return fetch (`${remoteURL}/bookdata/${id}?_expand`)
-    .then(res => res.json())
-}
-
-//fetches all books in the API
-export const getAllBooks = () => {
-    return fetch (`${remoteURL}/bookdata?_expand`)
-    .then(res => res.json())
-}
-
-//fetches the specific Library tied to the user
-export const getLibByUser = (userId) => {
-    return fetch (`${remoteURL}/library/${userId}?_expand`)
+//fetches the Library, all lib items
+export const getLibrary = () => {
+    return fetch (`${remoteURL}/library`)
     .then(res => res.json())
 }
 

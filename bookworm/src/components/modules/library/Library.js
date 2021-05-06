@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { LibraryCard } from './LibraryCard'
-import { deleteBookInLib, getAllBooks } from '../../../data/LibManager'
+import { getLibrary, deleteBookInLib, getAllBooks } from '../../../data/LibManager'
 import { useHistory } from 'react-router-dom';
 
 export const Library = () => {
@@ -8,13 +8,10 @@ export const Library = () => {
 
     const history = useHistory();
 
-
-    const getLibrary = () => {
-        return getAllBooks()
-            .then(booksFromAPI => {
-                setLib(booksFromAPI)
-            });
-    };
+    const getUserLib = () => {
+       const allLibraries = getLibrary().then()
+       const userLibrary = 
+    }
 
     const handleDeleteLibItem = (id) => {
         deleteBookInLib(id)
@@ -23,7 +20,7 @@ export const Library = () => {
     };
 
     useEffect(() => {
-        getLibrary();
+        // getLibrary();
     }, []);
 
     return (
@@ -38,10 +35,10 @@ export const Library = () => {
             </section>
 
 
-            <div className="conatiner-cards">
+            {/* <div className="conatiner-cards">
                 {libItems.map(library =>
                     <LibraryCard key={library.id} article={library} handleDeleteArticle={handleDeleteLibItem} />)}
-            </div>
+            </div> */}
         </>
     )
 };
