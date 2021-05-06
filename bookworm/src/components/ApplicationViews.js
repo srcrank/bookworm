@@ -10,7 +10,7 @@ import { RecList } from "./modules/recommend/RecommendForum"
 import { RecForm } from "./modules/recommend/RecForm"
 import { RecEditForm } from "./modules/recommend/RecEditForm"
 
-
+import { BookList } from "./modules/books/BookList"
 
 
 export const ApplicationViews = () => {
@@ -42,6 +42,10 @@ export const ApplicationViews = () => {
           </Route>
           <Route exact path="/recommend/:recId(\d+)/edit">
             <RecEditForm />
+          </Route>
+
+          <Route exact path= "/bookdata">
+            <BookList />
           </Route>
 
 
