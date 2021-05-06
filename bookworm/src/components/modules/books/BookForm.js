@@ -4,11 +4,9 @@ import { useHistory } from 'react-router-dom';
 import { addBook } from '../../../data/BookManager';
 import { getAllUsers } from '../../../data/UserManager';
 
-// Timestamp details to give the articles a date for the database
 
 export const BookForm = () => {
 
-    //destructure for useState, which sets a variable and empty array to be used.
     const [book, setBook] = useState({
         title: "",
         author: ""
@@ -24,7 +22,7 @@ export const BookForm = () => {
     // react native to render the previous page after an action.
     const history = useHistory();
 
-    // click event used for the id of the user.
+    // click event used for the id.
     const handleControlledInputChange = event => {
         const newBook = { ...book }
         let selectedVal = event.target.value
@@ -35,9 +33,7 @@ export const BookForm = () => {
         setBook(newBook)
     }
 
-    // click event used to ensure that all 
-    // fields are filled in before adding the article to the dashboard
-    // userId is invoked in order to pull the data from db 
+    // click event used to ensure that all fields are filled in before adding the book to the db and dom
     const handleClickSaveArticle = event => {
         event.preventDefault()
         const nullTitle = book.title
