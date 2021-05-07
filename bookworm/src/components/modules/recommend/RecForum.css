@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
 
 body {
     font-family: 'Raleway', sans-serif;
     background-color: #FFEADF;
+    color: #310D0D;
 }
 
 .recContainer-Cards {
