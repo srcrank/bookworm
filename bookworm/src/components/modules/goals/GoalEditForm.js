@@ -32,7 +32,7 @@ export const GoalEditForm = () => {
     const editedGoal = {
       id: goalId,
       name: goal.name,
-      description: goal.description,
+      notes: goal.description,
       completion: goal.completion,
       userId: goal.userId,
       isCompleted: false
@@ -87,7 +87,7 @@ export const GoalEditForm = () => {
               id="description"
               value={goal.description}
             />
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description">notes:</label>
 
             {/* DATE EDITING */}
             <input
