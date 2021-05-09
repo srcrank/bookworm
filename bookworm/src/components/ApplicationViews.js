@@ -4,6 +4,7 @@ import { Route } from "react-router-dom"
 import { Goals } from "./modules/goals/Goals"
 import { GoalForm } from "./modules/goals/GoalsForm"
 import { GoalEditForm } from "./modules/goals/GoalEditForm"
+import { Library } from "./modules/library/Library"
 
 import { RecList } from "./modules/recommend/RecommendForum"
 import { RecForm } from "./modules/recommend/RecForm"
@@ -28,6 +29,13 @@ export const ApplicationViews = () => {
             <GoalEditForm />
           </Route>
 
+          {/* Render the components for library page */}
+          <Route exact path = "/library">
+            <Library />
+          </Route>
+          {/* <Route exact path= "/library/add">
+            <AddBookToLib />
+          </Route> */}
           <Route exact path="/recommend">
             <RecList />
           </Route>
