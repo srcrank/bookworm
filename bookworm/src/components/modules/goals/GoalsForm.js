@@ -60,21 +60,21 @@ export const GoalForm = () => {
 
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="name"> Name?? </label>
+                    <label htmlFor="name"> Goal Name: </label>
                     <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Goal" value={goal.name} />
                 </div>
             </fieldset>
 
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="description">Description: </label>
+                    <label htmlFor="description">notes: </label>
                     <input type="text" id="description" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Description" value={goal.description} />
                 </div>
             </fieldset>
 
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="completion">Completion: </label>
+                    <label htmlFor="completion">Complete By: </label>
                     <input type="date" id="completion" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Goal Date" value={goal.completion} />
                 </div>
             </fieldset>

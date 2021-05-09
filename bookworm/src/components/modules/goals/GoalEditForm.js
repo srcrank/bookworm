@@ -51,8 +51,8 @@ export const GoalEditForm = () => {
 
   useEffect(() => {
     getGoalById(goalId)
-      .then(task => {
-        setGoal(task);
+      .then(goal => {
+        setGoal(goal);
             setIsLoading(false);
       });
   }, [goalId]);
@@ -87,7 +87,7 @@ export const GoalEditForm = () => {
               id="description"
               value={goal.description}
             />
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description">notes:</label>
 
             {/* DATE EDITING */}
             <input
