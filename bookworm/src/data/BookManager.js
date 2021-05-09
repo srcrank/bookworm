@@ -23,15 +23,15 @@ export const addBook = (newBook) => {
     }).then(getAllBooks()).catch(err => console.error("An error occurred adding new book", err))
 }
 
-export const updateBook = (editedBook) => {
-    //this is the fetch call which will allow for admins to edit book entries in the DB
+//fetch to edit the contents of a recommendation
+export const updateBook  = (editedBook) => {
     return fetch(`${remoteURL}/bookdata/${editedBook.id}`, {
         method: "PUT",
         headers: {
-            "Content=Type": "application/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(editedBook)
-    }).then(res => res.json())
+    }).then(data => data.json());
 }
 
 export const deleteBook = (id) => {
