@@ -3,7 +3,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom"
 
-export const LibraryCard = ({ libItem, handleDeleteBookInLib }) => { 
+export const LibraryCard = ({ book, handleDeleteBookInLib }) => { 
 
     //const currentUser = JSON.parse(sessionStorage.getItem("nutshell_user"))
 
@@ -12,15 +12,15 @@ export const LibraryCard = ({ libItem, handleDeleteBookInLib }) => {
     return (
     <div className="library-card">
     <div className="libraryCard-content">
-        <span className="card-articleName">{libItem.title}</span>
-            <p>{libItem.author}</p>
+        <span className="card-articleName">{book.title}</span>
+            <p>{book.author}</p>
             <select name="status" className="status-dropdown">
                 <option value="reading">reading</option>
                 <option value="completed">completed</option>
                 <option value="on hold">on hold</option>
                 <option value="plan to read">plan to read</option>
                 </select>
-            <button type="button" onClick={() => handleDeleteBookInLib(libItem.id)}>delete</button>
+            <button type="button" onClick={() => handleDeleteBookInLib(book.id)}>delete</button>
          </div>
     </div>
     )

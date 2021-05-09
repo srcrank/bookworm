@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { LibraryCard } from './LibraryCard'
-import { getLibrary, deleteBookInLib } from '../../../data/LibManager'
+import { getUsersLibrary, deleteBookInLib } from '../../../data/LibManager'
 import { useHistory } from 'react-router-dom';
 import { getAllBooks, getBookById } from '../../../data/BookManager';
 
@@ -14,9 +14,22 @@ export const Library = () => {
 
 
     const getUserLib = () => {
-      return getLibrary().then(res => res.filter(lib => lib.userId === currentUserId))
-       .then(userLib => setLib(userLib));
-    };
+        return getUsersLibrary(currentUserId).then((results) => {
+          if (results.length > 1) {
+            let promises = results.map((item) => {
+              return getBookById(item.bookId).then((bookData) => {
+                console.log('Res: ', bookData);
+                return bookData;
+              });
+            });
+            Promise.all(promises).then((bookData) => {
+              console.log('Promise All: ', bookData);
+              setBooks(bookData);
+            });
+          } else {
+          }
+        });
+      };
 
     const getBooksInLib = () => {
         console.log('Start Get Books', libItems)
@@ -45,7 +58,7 @@ export const Library = () => {
             <div className="container-libCards">
                 {books.map(book =>
                     <LibraryCard 
-                    key={book.id} article={book} handleDeleteArticle={handleDeleteLibItem} />
+                    key={book.id} book={book} handleDeleteLibItem={handleDeleteLibItem} />
                     )}
             </div>
         </>

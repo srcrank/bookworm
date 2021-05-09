@@ -6,6 +6,11 @@ export const getLibrary = () => {
     .then(res => res.json())
 }
 
+export const getUsersLibrary = (id) => {
+    return fetch(`${remoteURL}/library?userId=${id}`).then((results) => results.json());
+  };
+
+
 //will post books to user's list
 export const addBook2Lib = (newBook2Lib) => {
     return fetch(`${remoteURL}/library/`, {
@@ -16,7 +21,6 @@ export const addBook2Lib = (newBook2Lib) => {
         body: JSON.stringify(newBook2Lib)
     }).then(response => response.json())
 }
-
 
 export const updateLib = (editedLib) =>{
     return fetch(`${remoteURL}/library/${editedLib.id}`, {
