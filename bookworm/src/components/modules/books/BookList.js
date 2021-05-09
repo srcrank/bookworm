@@ -52,7 +52,7 @@ export const BookList = () => {
           <BookCard
             key={book.id}
             book={book}
-            handleDeleteEvent={handleDeleteBooks}
+            handleDeleteBooks={handleDeleteBooks}
             user={user}
           />
         ))}

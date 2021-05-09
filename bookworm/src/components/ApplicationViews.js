@@ -11,6 +11,7 @@ import { RecEditForm } from "./modules/recommend/RecEditForm"
 
 import { BookList } from "./modules/books/BookList"
 import { BookForm } from "./modules/books/BookForm"
+import { BookEditForm } from "./modules/books/BookEditForm"
 
 
 export const ApplicationViews = () => {
@@ -42,6 +43,9 @@ export const ApplicationViews = () => {
           </Route>
           <Route exact path="/bookdata/add">
             <BookForm />
+          </Route>
+          <Route exact path="/bookdata/:bookId(\d+)/edit">
+            <BookEditForm />
           </Route>
 
         </>
