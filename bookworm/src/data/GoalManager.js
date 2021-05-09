@@ -5,6 +5,11 @@ export const getGoalById = (id) => {
     .then(res => res.json())
 }
 
+export const getGoalByUser = (userId) => {
+    return fetch (`${remoteURL}/goals/?userId=${userId}`)
+    .then(res => res.json())
+}
+
 export const getAllGoals = () => {
     return fetch (`${remoteURL}/goals?_expand=user`)
     .then(res => res.json())
