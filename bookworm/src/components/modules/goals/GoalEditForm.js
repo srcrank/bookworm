@@ -32,7 +32,7 @@ export const GoalEditForm = () => {
     const editedGoal = {
       id: goalId,
       name: goal.name,
-      notes: goal.description,
+      description: goal.description,
       completion: goal.completion,
       userId: goal.userId,
       isCompleted: false
@@ -51,8 +51,8 @@ export const GoalEditForm = () => {
 
   useEffect(() => {
     getGoalById(goalId)
-      .then(task => {
-        setGoal(task);
+      .then(goal => {
+        setGoal(goal);
             setIsLoading(false);
       });
   }, [goalId]);
