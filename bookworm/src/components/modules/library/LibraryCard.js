@@ -14,14 +14,16 @@ export const LibraryCard = ({ book, handleDeleteBookInLib }) => {
     <div className="libraryCard-content">
         <span className="card-articleName">{book.title}</span>
             <p>{book.author}</p>
-            <select name="status" className="status-dropdown">
-                <option value="reading">reading</option>
-                <option value="completed">completed</option>
-                <option value="on hold">on hold</option>
-                <option value="plan to read">plan to read</option>
-                </select>
+            <p>{book.status}</p>
             <button type="button" onClick={() => handleDeleteBookInLib(book.id)}>delete</button>
          </div>
     </div>
     )
 } 
+
+{/* <select name="status" className="status-dropdown">
+<option value="reading">reading</option>
+<option value="completed">completed</option>
+<option value="on hold">on hold</option>
+<option value="plan to read">plan to read</option>
+</select> */}
