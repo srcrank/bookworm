@@ -11,6 +11,10 @@ export const getUsersLibrary = (id) => {
   };
 
 
+  export const getStatusFromLib = (status) => {
+    return fetch(`${remoteURL}/library?status=${status}`).then((results) => results.json());
+  };
+
 //will post books to user's list
 export const addBook2Lib = (newBook2Lib) => {
     return fetch(`${remoteURL}/library/`, {

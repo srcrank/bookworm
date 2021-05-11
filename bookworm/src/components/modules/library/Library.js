@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { LibraryCard } from './LibraryCard'
-import { getUsersLibrary, deleteBookInLib } from '../../../data/LibManager'
+import { getUsersLibrary, deleteBookInLib, getStatusFromLib } from '../../../data/LibManager'
 import { useHistory } from 'react-router-dom';
 import { getAllBooks, getBookById } from '../../../data/BookManager';
 
@@ -30,6 +30,10 @@ export const Library = () => {
           }
         });
       };
+
+    const getStatus = () => {
+      return getStatusFromLib(currentUserId).then((results) =>)
+    }
 
     const getBooksInLib = () => {
         console.log('Start Get Books', libItems)
