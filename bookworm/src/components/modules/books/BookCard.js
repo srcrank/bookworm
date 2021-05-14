@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import './BookCard.css'
 
 export const BookCard = ({ book, handleDeleteBooks, user }) => {
   const history = useHistory();
@@ -10,21 +11,18 @@ export const BookCard = ({ book, handleDeleteBooks, user }) => {
           <span className="BookTitle">{book.title}</span>
         </h3>
         <p className="book-AuthorName">{book.author}</p>
-        <button type="button" onClick={() => history.push(`/library`)}>
-          {" "}
-          Add to Library{" "}
-        </button>
+        <div className="button-container">
         {/* add and if statement here so that only admins can delete or edit books */}
-        <button
-          type="button"
+        <button className="book-button" type="button"
           onClick={() => history.push(`/bookdata/${book.id}/edit`)}
         >
-          Edit
+          edit
         </button>
         {/* add an if statement here so that only admins can delete or edit books */}
-        <button type="button" onClick={() => handleDeleteBooks(book.id)}>
-          DELETE
+        <button className="book-button" type="button" onClick={() => handleDeleteBooks(book.id)}>
+          delete
         </button>
+        </div>
       </div>
     );
   } else {
@@ -34,10 +32,12 @@ export const BookCard = ({ book, handleDeleteBooks, user }) => {
           <span className="BookTitle">{book.title}</span>
         </h3>
         <p className="book-AuthorName">{book.author}</p>
-        <button type="button" onClick={() => history.push(`/library`)}>
+        <div className="button-container">
+        <button className="book-button" type="button" onClick={() => history.push(`/library`)}>
           {" "}
           Add to Library{" "}
         </button>
+        </div>
       </div>
     );
   }
