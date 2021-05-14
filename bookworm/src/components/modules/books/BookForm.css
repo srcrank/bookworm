@@ -30,7 +30,6 @@ input {
   margin: 8px 0;
   border-radius: .5em;
   box-sizing: border-box;
-  border-style: ;
 }
 
 input[type=text]:focus {
