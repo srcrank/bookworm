@@ -1,8 +1,4 @@
-.goal-card {
+.goalSection-content {
     display: flex;
-    background-color: #FFAAAB;
-    margin: 5em;
-    border-radius: 2em;
-    padding: 2em;
-    color: white;
+    justify-content: flex-end;
 }

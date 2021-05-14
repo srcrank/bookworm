@@ -38,8 +38,10 @@ export const RecCard = ({message, handleDeleteRec}) => {
                 {/*This is a conditional to determine who is viewing the recs*/}
                     {message.userId === currentUser ? 
                 <>
-                    <button className="rec-button" type="button" onClick={() => history.push(`/recommend/${message.id}/edit`)}>  edit </button>
-                    <button className="rec-button" type="button" onClick={() => handleDeleteRec(message.id)}>delete</button>
+                <div className="EditDeleteButton-Container">
+                    <button className="rec-EdDeButton" type="button" onClick={() => history.push(`/recommend/${message.id}/edit`)}>edit</button>
+                    <button className="rec-EdDeButton" type="button" onClick={() => handleDeleteRec(message.id)}>delete</button>
+                    </div>
                 </>
                 : null
                 }
