@@ -60,6 +60,7 @@ export const BookList = () => {
             key={book.id}
             book={book}
             handleDeleteBooks={handleDeleteBooks}
+            handleAddBooks={handleAddBooks}
             user={user}
           />
         ))}

@@ -16,7 +16,7 @@ export const BookForm = () => {
     // all data fields are entered. They are set to false initially.  
     const [isLoading, setIsLoading] = useState(false);
 
-    // props used to identify the creator of the article.
+    // props used to identify the creator of the book.
     const [users, setUsers] = useState([]);
 
     // react native to render the previous page after an action.
@@ -34,7 +34,7 @@ export const BookForm = () => {
     }
 
     // click event used to ensure that all fields are filled in before adding the book to the db and dom
-    const handleClickSaveArticle = event => {
+    const handleClickSaveBook = event => {
         event.preventDefault()
         const nullTitle = book.title
         const nullAuthor = book.author
@@ -76,7 +76,7 @@ export const BookForm = () => {
             </fieldset>
 
             <button className="addBtn"
-                onClick={handleClickSaveArticle} disabled={isLoading}>
+                onClick={handleClickSaveBook} disabled={isLoading}>
                 + add book
             </button>
         </form>
