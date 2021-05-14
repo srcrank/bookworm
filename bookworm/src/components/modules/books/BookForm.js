@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { addBook } from '../../../data/BookManager';
 import { getAllUsers } from '../../../data/UserManager';
+import "./BookForm.css"
 
 
 export const BookForm = () => {
@@ -34,7 +35,7 @@ export const BookForm = () => {
     }
 
     // click event used to ensure that all fields are filled in before adding the book to the db and dom
-    const handleClickSaveArticle = event => {
+    const handleClickSaveBook = event => {
         event.preventDefault()
         const nullTitle = book.title
         const nullAuthor = book.author
@@ -60,25 +61,26 @@ export const BookForm = () => {
     return (
         <form className="bookForm">
             <h2 className="bookForm-title">Add a Book</h2>
-
+            <div className="form-style">
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="title">Title: </label>
+                    <label htmlFor="title">Title </label>
                     <input type="text" id="title" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Book Title" value={book.title} />
                 </div>
             </fieldset>
 
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="author">Author: </label>
+                    <label htmlFor="author">Author </label>
                     <input type="text" id="author" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Author" value={book.author} />
                 </div>
             </fieldset>
 
-            <button className="addBtn"
-                onClick={handleClickSaveArticle} disabled={isLoading}>
+            <button className="add-button"
+                onClick={handleClickSaveBook} disabled={isLoading}>
                 + add book
             </button>
+            </div>
         </form>
     )
 }
