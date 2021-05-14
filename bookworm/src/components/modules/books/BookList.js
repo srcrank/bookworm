@@ -3,11 +3,12 @@ import { deleteBook, getAllBooks } from "../../../data/BookManager"
 import { getUserById } from "../../../data/UserManager"
 import { useHistory } from "react-router-dom";
 import { BookCard } from "./BookCard"
-
+import { addBook2Lib } from "../../../data/LibManager";
 
 export const BookList = () => {
   const [books, setBooks] = useState([]);
   const [user, setUser] = useState([]);
+  const [lib, setLib] = useState([]);
 
   const history = useHistory();
   const currentUserId = parseInt(sessionStorage.getItem("bookworm_user"));
@@ -23,6 +24,12 @@ export const BookList = () => {
     getUserById(currentUserId).then((user) => {
         setUser(user)
     }) 
+  }
+
+  const handleAddBooks = () =>{
+    addBook2Lib(currentUserId).then((user) => {
+      setLib(user)
+    })
   }
 
   const handleDeleteBooks = (id) => {
