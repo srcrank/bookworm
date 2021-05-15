@@ -1,0 +1,536 @@
+{
+  "users": [
+    {
+      "firstname": "Salma",
+      "lastname": "Crank",
+      "email": "salmacrank@gmail.com",
+      "id": 1,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Lynnell",
+      "lastname": "Faich",
+      "email": "lfaich1@google.es",
+      "id": 2,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Stephan",
+      "lastname": "Hehnke",
+      "email": "shehnke2@tumblr.com",
+      "id": 3,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Nicola",
+      "lastname": "Jarmain",
+      "email": "njarmain3@ezinearticles.com",
+      "id": 4,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Valentia",
+      "lastname": "Wiltshier",
+      "email": "vwiltshier4@sogou.com",
+      "id": 5,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Ollie",
+      "lastname": "Aps",
+      "email": "oaps5@cbslocal.com",
+      "id": 6,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Blane",
+      "lastname": "Eggleson",
+      "email": "beggleson6@timesonline.co.uk",
+      "id": 7,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Byram",
+      "lastname": "Paaso",
+      "email": "bpaaso7@eventbrite.com",
+      "id": 8,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Susanetta",
+      "lastname": "Cutriss",
+      "email": "scutriss8@barnesandnoble.com",
+      "id": 9,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Ulrick",
+      "lastname": "Castaner",
+      "email": "ucastaner9@si.edu",
+      "id": 10,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Brody",
+      "lastname": "Pistol",
+      "email": "bpistola@prlog.org",
+      "id": 11
+    },
+    {
+      "firstname": "Arman",
+      "lastname": "Gration",
+      "email": "agrationb@reddit.com",
+      "id": 12,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Marcile",
+      "lastname": "Lewsy",
+      "email": "mlewsyc@google.de",
+      "id": 13,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Dominica",
+      "lastname": "Glave",
+      "email": "dglaved@privacy.gov.au",
+      "id": 14,
+      "isAdmin": false
+    },
+    {
+      "firstname": "Bookworm",
+      "lastname": "Admin",
+      "email": "admin@bookworm.com",
+      "id": 15,
+      "isAdmin": true
+    },
+    {
+      "firstName": "Gracie",
+      "lastName": "Morris",
+      "email": "grmorr@gmail.com",
+      "isAdmin": false,
+      "id": 16
+    },
+    {
+      "firstName": "Julia",
+      "lastName": "Degnan",
+      "email": "peepee@gmail.com",
+      "isAdmin": false,
+      "id": 17
+    },
+    {
+      "firstName": "test !",
+      "lastName": "test test",
+      "email": "test@test",
+      "isAdmin": false,
+      "id": 18
+    }
+  ],
+  "goals": [
+    {
+      "name": "Finish the Catcher in the Rye",
+      "description": "",
+      "completion": "2021-06-14",
+      "isCompleted": false,
+      "userId": 13,
+      "id": 3
+    },
+    {
+      "name": "Read 100 Books by 2022",
+      "description": "",
+      "completion": "2022-01-01",
+      "isCompleted": false,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "Finish \"Go, Went, Gone\" in 10 days",
+      "description": "I am really enjoying this one. Need to discuss with Sarah once I'm done!",
+      "completion": "2021-05-22",
+      "isCompleted": false,
+      "userId": 1,
+      "id": 6
+    }
+  ],
+  "recommend": [
+    {
+      "userId": 1,
+      "message": "I really liked reading Know My Name by Chanel Miller!",
+      "timestamp": "5/4/2021, 2:21:05 PM",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "message": "Educated by Tara Westover was a very enjoyable memoir",
+      "timestamp": "5/4/2021, 3:01:10 PM",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "message": "Admin here, thanks for using the app!!",
+      "userId": 15,
+      "timestamp": "5/5/2021, 2:49:15 AM"
+    },
+    {
+      "userId": 13,
+      "message": "Looking for a good Horror Book, anyone have a good suggestion?",
+      "timestamp": "5/5/2021, 10:06:52 AM",
+      "id": 5
+    },
+    {
+      "userId": 6,
+      "message": "marcile, I think you might enjoy 'the silent patient'",
+      "timestamp": "5/6/2021, 10:06:52 AM",
+      "id": 6
+    },
+    {
+      "userId": 10,
+      "message": "My son is interested in reading chapter books. Any good starter books I can check out?",
+      "timestamp": "5/7/2021, 10:06:52 AM",
+      "id": 7
+    },
+    {
+      "userId": 8,
+      "message": "haven't read a good book in years. reading is lame.",
+      "timestamp": "5/9/2021, 10:06:52 AM",
+      "id": 8
+    },
+    {
+      "userId": 4,
+      "message": "I highly recommend 'Ask Again, Yes' by Mary Beth Keane",
+      "timestamp": "5/9/2021, 10:09:52 AM",
+      "id": 9
+    },
+    {
+      "userId": 5,
+      "message": "The first book I ever read was Harry Potter. It's a great starter book for young readers.",
+      "timestamp": "5/9/2021, 11:06:52 AM",
+      "id": 10
+    },
+    {
+      "userId": 7,
+      "message": "Anyone interested in starting a book club with me? my email is beggleson6@timesonline.co.uk",
+      "timestamp": "5/13/2021, 10:06:52 AM",
+      "id": 11
+    },
+    {
+      "userId": 15,
+      "message": "Love this community of readers~",
+      "timestamp": "5/14/2021, 4:52:20 AM",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "message": "I love you guys, thanks for being my best friends!",
+      "timestamp": "5/14/2021, 7:17:02 PM",
+      "id": 13
+    },
+    {
+      "userId": 18,
+      "message": "Hey!! ",
+      "timestamp": "5/14/2021, 8:57:08 PM",
+      "id": 14
+    },
+    {
+      "userId": 18,
+      "message": "test 2",
+      "timestamp": "5/14/2021, 8:59:33 PM",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "message": "hey!",
+      "timestamp": "5/15/2021, 1:39:07 PM",
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "message": "test scroll",
+      "timestamp": "5/15/2021, 1:39:36 PM",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "message": "hello",
+      "timestamp": "5/15/2021, 1:39:55 PM",
+      "id": 22
+    }
+  ],
+  "library": [
+    {
+      "id": 1,
+      "userId": 1,
+      "bookId": 1,
+      "status": "reading"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "bookId": 5,
+      "status": "completed"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "bookId": 1,
+      "status": "plan to read"
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "bookId": 10,
+      "status": "plan to read"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "bookId": 11,
+      "status": "plan to read"
+    },
+    {
+      "id": 6,
+      "userId": 4,
+      "bookId": 19,
+      "status": "plan to read"
+    },
+    {
+      "id": 7,
+      "userId": 5,
+      "bookId": 4,
+      "status": "plan to read"
+    },
+    {
+      "id": 8,
+      "userId": 4,
+      "bookId": 5,
+      "status": "plan to read"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "bookId": 17,
+      "status": "plan to read"
+    },
+    {
+      "id": 10,
+      "userId": 2,
+      "bookId": 20,
+      "status": "plan to read"
+    },
+    {
+      "bookId": 2,
+      "userId": 1,
+      "status": "plan to read",
+      "id": 11
+    },
+    {
+      "bookId": 4,
+      "userId": 1,
+      "status": "plan to read",
+      "id": 12
+    },
+    {
+      "bookId": 8,
+      "userId": 1,
+      "status": "plan to read",
+      "id": 13
+    },
+    {
+      "bookId": 3,
+      "userId": 1,
+      "status": "plan to read",
+      "id": 14
+    },
+    {
+      "bookId": 15,
+      "userId": 1,
+      "status": "plan to read",
+      "id": 15
+    },
+    {
+      "bookId": 14,
+      "userId": 1,
+      "status": "plan to read",
+      "id": 16
+    },
+    {
+      "bookId": 16,
+      "userId": 1,
+      "status": "plan to read",
+      "id": 17
+    },
+    {
+      "bookId": 24,
+      "userId": 1,
+      "status": "plan to read",
+      "id": 18
+    }
+  ],
+  "bookdata": [
+    {
+      "id": 1,
+      "title": "A Strange Country",
+      "author": "Muriel Barbery"
+    },
+    {
+      "title": "Go, Went, Gone",
+      "author": "Jenny Erpenbeck",
+      "id": 2
+    },
+    {
+      "title": "Educated",
+      "author": "Tara Westover",
+      "id": 3
+    },
+    {
+      "title": "Cat's Eye",
+      "author": "Margaret Atwood",
+      "id": 4
+    },
+    {
+      "title": "Sputnik Sweetheart",
+      "author": "Haruki Murakami",
+      "id": 5
+    },
+    {
+      "title": "Commonwealth",
+      "author": "Ann Patchett",
+      "id": 6
+    },
+    {
+      "title": "Life After Life",
+      "author": "Kate Atkinson",
+      "id": 7
+    },
+    {
+      "title": "In Cold Blood",
+      "author": "Truman Capote",
+      "id": 8
+    },
+    {
+      "title": "East of Eden",
+      "author": "John Steinbeck",
+      "id": 9
+    },
+    {
+      "title": "Normal People",
+      "author": "Sally Rooney",
+      "id": 10
+    },
+    {
+      "title": "Little Fires Everywhere",
+      "author": "Celeste Ng",
+      "id": 11
+    },
+    {
+      "title": "The Bluest Eye",
+      "author": "Toni Morrison",
+      "id": 12
+    },
+    {
+      "title": "Song of Solomon",
+      "author": "Toni Morrison",
+      "id": 13
+    },
+    {
+      "title": "To Kill A Mockingbird",
+      "author": "Harper Anderson",
+      "id": 14
+    },
+    {
+      "title": "The Spirit Catches You and You Fall Down",
+      "author": "Anne Fadiman",
+      "id": 15
+    },
+    {
+      "title": "Midaq Alley",
+      "author": "Naguib Mafouz",
+      "id": 16
+    },
+    {
+      "title": "Catch-22",
+      "author": "Joseph Heller",
+      "id": 17
+    },
+    {
+      "title": "The Joy Luck CLub",
+      "author": "Amy Tan",
+      "id": 18
+    },
+    {
+      "title": "The Unbearable Lightness of Being",
+      "author": "Milan Kundera",
+      "id": 19
+    },
+    {
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "id": 20
+    },
+    {
+      "title": "The Remains of the Day",
+      "author": "Kazuo Ishiguro",
+      "id": 21
+    },
+    {
+      "title": "Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "id": 22
+    },
+    {
+      "title": "Black Boy",
+      "author": "Richard Wright",
+      "id": 23
+    },
+    {
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "id": 24
+    },
+    {
+      "title": "The Complete Stories",
+      "author": "Flannery O'Conner",
+      "id": 25
+    },
+    {
+      "title": "The Grapes of Wrath",
+      "author": "John Steinbeck",
+      "id": 26
+    },
+    {
+      "title": "Memoirs of a Geisha",
+      "author": "Arthur Golden",
+      "id": 27
+    },
+    {
+      "title": "Harry Potter and The Chamber of Secrets",
+      "author": "J.K. Rowling",
+      "id": 28
+    },
+    {
+      "title": "Song of Achilles",
+      "author": "Madeline Miller",
+      "id": 30
+    },
+    {
+      "title": "The Handmaiden's Tale",
+      "author": "Margaret Atwood",
+      "id": 31
+    },
+    {
+      "id": 32,
+      "title": "Men Without Women",
+      "author": "Haruki Murakami"
+    },
+    {
+      "title": "Twilight",
+      "author": "Stephanie Meyer",
+      "id": 33
+    },
+    {
+      "title": "Volcano Lover",
+      "author": "Susan Sontag",
+      "id": 34
+    }
+  ]
+}

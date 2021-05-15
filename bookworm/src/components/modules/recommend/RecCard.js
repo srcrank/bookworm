@@ -18,7 +18,7 @@ export const RecCard = ({message, handleDeleteRec}) => {
     const currentUser = parseInt(sessionStorage.getItem("bookworm_user"));
 
     return (
-        <div className="rec-Card">
+        <div className="rec-Card" id="recScreenScroll">
             <div className="recCard-content">
             <div className="rec">
                 {message.user.id !== currentUser
