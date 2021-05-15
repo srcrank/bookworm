@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { addGoal } from '../../../data/GoalManager';
 import { getAllUsers } from '../../../data/UserManager';
 import { getAllGoals } from '../../../data/GoalManager';
+import "./GoalForm.css"
 
 export const GoalForm = () => {
     const currentUser = JSON.parse(sessionStorage.getItem("bookworm_user"))
@@ -57,7 +58,7 @@ export const GoalForm = () => {
     return (
         <form className="goalForm">
             <h2 className="goalForm_title">Add New Goal</h2>
-
+            <div className="goalForm-style">
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name"> Goal Name: </label>
@@ -67,7 +68,7 @@ export const GoalForm = () => {
 
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="description">notes: </label>
+                    <label htmlFor="description">Notes: </label>
                     <input type="text" id="description" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Description" value={goal.description} />
                 </div>
             </fieldset>
@@ -92,11 +93,13 @@ export const GoalForm = () => {
                     </select>
                 </div>
             </fieldset> */}
-
-            <button className="btn btn-primary"
+<div className="goalFormButton-container"> 
+            <button className="addGoal-button"
                 onClick={handleClickSaveTask} disabled={isLoading}>
                 Save Goal
             </button>
+            </div>
+            </div>
         </form>
     )
 }

@@ -1,0 +1,41 @@
+.recForm {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3em;
+}
+
+.recInput-container {
+    margin-left: 2em;
+    width: 80%;
+    height: 4em;
+    display: flex;
+}
+
+.recButton-container {
+    display: flex;
+    align-items: center;
+}
+
+.rec-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: none;
+    padding: 0.7em 1.4em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    background-color: #abb761;
+    height: 3.5em;
+    font-weight: bold;
+  }
+  
+  .rec-button:hover {
+    background-color: #feb300;
+  }

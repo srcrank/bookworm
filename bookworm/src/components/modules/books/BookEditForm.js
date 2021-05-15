@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from 'react-router-dom';
 import { updateBook, getBookById } from "../../../data/BookManager";
 import { getAllUsers } from "../../../data/UserManager";
+import "./BookEditForm.css"
 
 export const BookEditForm = () => {
   const [book, setBook ] = useState({});
@@ -70,27 +71,28 @@ export const BookEditForm = () => {
   // Fieldset used to Edit articles by title, link, and synopsis.
   return (
     <>
-      <form className="bookForm">
+      <form className="book-EditForm">
             <h2 className="bookForm-title">Edit Book</h2>
-
+<div className="form-style">
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="title">Title: </label>
+                    <label htmlFor="title">Title </label>
                     <input type="text" id="title" onChange={handleFieldChange} required autoFocus className="form-control" placeholder="Book Title" value={book.title} />
                 </div>
             </fieldset>
 
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="author">Author: </label>
+                    <label htmlFor="author">Author </label>
                     <input type="text" id="author" onChange={handleFieldChange} required autoFocus className="form-control" placeholder="Author" value={book.author} />
                 </div>
             </fieldset>
 
-            <button className="addBtn"
+            <button className="add-button"
                 onClick={updateExistingBook} disabled={isLoading}>
                 update book
             </button>
+            </div>
         </form>
     </>
     )

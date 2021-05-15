@@ -34,10 +34,11 @@ export const RecList = () => {
                     )}
               </div>
               <div className="section-content">
+                  <RecForm />
                   
-                <button type="button" className="btn" onClick={() => { history.push("/recommend/add")}}>
+                {/* <button type="button" className="add-recButton" onClick={() => { history.push("/recommend/add")}}>
                     + recommend
-                </button>
+                </button> */}
             </div>
             </div>            
         </>
