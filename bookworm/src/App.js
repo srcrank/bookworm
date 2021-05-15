@@ -11,7 +11,6 @@ export const Bookworm = () => (
   <Route
     render={() => {
       if (sessionStorage.getItem("bookworm_user")) {
-        console.log(sessionStorage.getItem("bookworm_user"))
         return (
           <>
             <NavBar />
