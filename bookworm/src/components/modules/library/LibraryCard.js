@@ -4,7 +4,7 @@ import React from "react";
 import { useHistory } from "react-router-dom"
 import "./LibraryCard.css"
 
-export const LibraryCard = ({ book, handleDeleteBookInLib }) => { 
+export const LibraryCard = ({ book, handleDeleteLibItem, editLibStatus}) => { 
 
     //const currentUser = JSON.parse(sessionStorage.getItem("nutshell_user"))
 
@@ -16,23 +16,19 @@ export const LibraryCard = ({ book, handleDeleteBookInLib }) => {
         <span className="library-bookName">{book.title}</span>
             <p className="library-authorName">{book.author}</p>
             {/* <span className="library-status"> {lib.status} </span> */}
-            <select name="status" className="status-dropdown">
+            <select name="status" className="status-dropdown" value={book.status} onChange={(evt) => editLibStatus(evt, book.libId)} >
                 <option value="reading">reading</option>
                 <option value="completed">completed</option>
                 <option value="on hold">on hold</option>
                 <option value="plan to read">plan to read</option>
                 </select>
             <div className="libraryButton-container">
-            <button className="library-button" type="button" onClick={() => handleDeleteBookInLib(book.id)}>delete</button>
+            <button className="library-button" type="button" onClick={() => handleDeleteLibItem(book.libId)}>delete</button>
          </div>
          </div>
     </div>
     )
 } 
 
-{/* <select name="status" className="status-dropdown">
-<option value="reading">reading</option>
-<option value="completed">completed</option>
-<option value="on hold">on hold</option>
-<option value="plan to read">plan to read</option>
-</select> */}
+
+//react set class based on value

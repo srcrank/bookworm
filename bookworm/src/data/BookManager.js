@@ -1,7 +1,6 @@
 const remoteURL = "http://localhost:8088"
 
 export const getBookById = (id) => {
-    console.log('Get Book By IDs', id)
     //fetch call to grab books by their id.
     return fetch(`${remoteURL}/bookdata/${id}?_expand=`)
     .then(res =>res.json())

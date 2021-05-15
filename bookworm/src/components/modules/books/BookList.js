@@ -1,41 +1,43 @@
 import React, { useState, useEffect } from "react";
-import { deleteBook, getAllBooks } from "../../../data/BookManager"
-import { getUserById } from "../../../data/UserManager"
+import { deleteBook, getAllBooks } from "../../../data/BookManager";
+import { getUserById } from "../../../data/UserManager";
 import { useHistory } from "react-router-dom";
-import { BookCard } from "./BookCard"
+import { BookCard } from "./BookCard";
 import { addBook2Lib } from "../../../data/LibManager";
-import './BookList.css'
-
+import "./BookList.css";
 
 export const BookList = () => {
   const [books, setBooks] = useState([]);
   const [user, setUser] = useState([]);
-  const [lib, setLib] = useState([]);
+  // const [lib, setLib] = useState([]);
 
   const history = useHistory();
   const currentUserId = parseInt(sessionStorage.getItem("bookworm_user"));
 
   const getBooks = () => {
     return getAllBooks().then((booksFromAPI) => {
-      //trying to sort books by title here. Not quite working. 
+      //trying to sort books by title here. Not quite working.
       const sortBooks = booksFromAPI.sort((a, b) => {
-        return a.title-b.title
-      })
+        return a.title - b.title;
+      });
       setBooks(sortBooks);
     });
   };
 
-  const getCurrentUser = () => { 
+  const getCurrentUser = () => {
     getUserById(currentUserId).then((user) => {
-        setUser(user)
-    }) 
-  }
+      setUser(user);
+    });
+  };
 
-  const handleAddBooks = () =>{
-    addBook2Lib(currentUserId).then((user) => {
-      setLib(user)
-    })
-  }
+  const handleAddBooks = (bookId) => {
+    const libObject = {
+      bookId: bookId,
+      userId: currentUserId,
+      status: "plan to read",
+    };
+    addBook2Lib(libObject);
+  };
 
   const handleDeleteBooks = (id) => {
     deleteBook(id).then(() => getAllBooks().then(setBooks));
@@ -47,9 +49,8 @@ export const BookList = () => {
 
   return (
     <>
-        
-        <span className="page-title">Browse Books</span>
-        <div className="addButton-container">
+      <span className="page-title">Browse Books</span>
+      <div className="addButton-container">
         <button
           type="button"
           className="add-button"
@@ -59,9 +60,7 @@ export const BookList = () => {
         >
           new book
         </button>
-        </div>
-
-
+      </div>
 
       <div className="container-bookCards">
         {books.map((book) => (

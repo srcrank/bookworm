@@ -16,18 +16,18 @@ export const getUsersLibrary = (id) => {
   };
 
 //will post books to user's list
-export const addBook2Lib = (newBook2Lib) => {
+export const addBook2Lib = (libObj) => {
     return fetch(`${remoteURL}/library/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(newBook2Lib)
+        body: JSON.stringify(libObj)
     }).then(response => response.json())
 }
 
-export const updateLib = (editedLib) =>{
-    return fetch(`${remoteURL}/library/${editedLib.id}`, {
+export const updateLibStatus = (editedLib) =>{
+    return fetch(`${remoteURL}/library/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

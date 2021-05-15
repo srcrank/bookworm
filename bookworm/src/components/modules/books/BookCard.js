@@ -33,7 +33,7 @@ export const BookCard = ({ book, handleDeleteBooks, handleAddBooks, user }) => {
         </h3>
         <p className="book-AuthorName">{book.author}</p>
         <div className="button-container">
-        <button className="book-button" type="button" onClick={() => history.push(`/library`)}>
+        <button className="book-button" type="button" onClick={() => handleAddBooks(book.id)}>
           {" "}
           Add to Library{" "}
         </button>
