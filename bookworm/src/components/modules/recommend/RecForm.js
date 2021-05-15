@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { getAllUsers } from '../../../data/UserManager'
 import { addRec } from '../../../data/RecommendManager'
+import "./RecForm.css"
 
 export const RecForm = () => {
     const currentUser = JSON.parse(sessionStorage.getItem("bookworm_user"))
@@ -42,15 +43,18 @@ export const RecForm = () => {
 
     return (
         <form className="recForm">
-            <h3 className="recForm-title">
+            {/* <h3 className="recForm-title">
                 have a recommendation?
-            </h3>
-        <textarea type="textarea" id="message" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="say something!" />
-            
-        <button className="btn btn-primary" onClick={handleClickSaveRec} disabled={isLoading}>
+            </h3> */}
+        <div className="recInput-container">
+        <input type="text" id="message" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="say something!" />
+        </div>
+
+        <div className="recButton-container"> 
+        <button className="rec-button" onClick={handleClickSaveRec} disabled={isLoading}>
                 recommend!
                 </button>
-
+        </div>
         </form>
     )
 }

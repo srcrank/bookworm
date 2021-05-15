@@ -10,6 +10,7 @@ import {
   updateGoal,
 } from "../../../data/GoalManager";
 import { useHistory } from "react-router-dom";
+import "./Goals.css"
 
 export const Goals = () => {
   const [goals, setGoals] = useState([]);
@@ -49,6 +50,17 @@ export const Goals = () => {
 
   return (
     <>
+    <section className="goalSection-content">
+        <button
+          type="button"
+          className="goal-button"
+          onClick={() => {
+            history.push("/goals/create");
+          }}
+        >
+          + add goal
+        </button>
+      </section>
       {goals.length > 0 ? (
         <div className="goalContainer-Cards">
           {goals.map((goal) => (
@@ -63,17 +75,6 @@ export const Goals = () => {
       ) : (
         <NoGoalCard />
       )}
-      <section className="goalSection-content">
-        <button
-          type="button"
-          className="btn"
-          onClick={() => {
-            history.push("/goals/create");
-          }}
-        >
-          +goal
-        </button>
-      </section>
     </>
   );
 };

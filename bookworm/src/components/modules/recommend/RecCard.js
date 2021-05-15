@@ -2,6 +2,7 @@
 //why isn't message a taco??
 import React from "react";
 import { useHistory } from "react-router-dom";
+import "./RecCard.css"
 
 // Export function to show the rec
 export const RecCard = ({message, handleDeleteRec}) => {
@@ -17,17 +18,17 @@ export const RecCard = ({message, handleDeleteRec}) => {
     const currentUser = parseInt(sessionStorage.getItem("bookworm_user"));
 
     return (
-        <div className="card">
-            <div className="card-content">
-            <div className="nameplate">
+        <div className="rec-Card">
+            <div className="recCard-content">
+            <div className="rec">
                 {message.user.id !== currentUser
                     ?<>
-                    <h4 className="card-name">{message.user.firstname} {message.user.lastname}:</h4>
+                    <h4 className="card-name">{message.user.firstname} {message.user.lastname}: </h4>
                     {/* <h4 className="timestamp">@{recHour}{recSun}:</h4> */}
                     <span className="message">{message.message}</span>
                     </>
                     :<>
-                    <h4 className="card-username">{message.user.firstname} {message.user.lastname}:</h4>
+                    <h4 className="userName">{message.user.firstname} {message.user.lastname}: </h4>
                     {/* <h4 className="timestamp">@{recHour}{recSun}:</h4> */}
                     <span className="userMessage">{message.message}</span>
                     </>
@@ -37,8 +38,10 @@ export const RecCard = ({message, handleDeleteRec}) => {
                 {/*This is a conditional to determine who is viewing the recs*/}
                     {message.userId === currentUser ? 
                 <>
-                    <button type="button" onClick={() => history.push(`/recommend/${message.id}/edit`)}> ~ edit </button>
-                    <button type="button" onClick={() => handleDeleteRec(message.id)}>delete</button>
+                <div className="EditDeleteButton-Container">
+                    <button className="rec-EdDeButton" type="button" onClick={() => history.push(`/recommend/${message.id}/edit`)}>edit</button>
+                    <button className="rec-EdDeButton" type="button" onClick={() => handleDeleteRec(message.id)}>delete</button>
+                    </div>
                 </>
                 : null
                 }

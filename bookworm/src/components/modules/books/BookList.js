@@ -4,6 +4,8 @@ import { getUserById } from "../../../data/UserManager"
 import { useHistory } from "react-router-dom";
 import { BookCard } from "./BookCard"
 import { addBook2Lib } from "../../../data/LibManager";
+import './BookList.css'
+
 
 export const BookList = () => {
   const [books, setBooks] = useState([]);
@@ -13,10 +15,13 @@ export const BookList = () => {
   const history = useHistory();
   const currentUserId = parseInt(sessionStorage.getItem("bookworm_user"));
 
-
   const getBooks = () => {
     return getAllBooks().then((booksFromAPI) => {
-      setBooks(booksFromAPI);
+      //trying to sort books by title here. Not quite working. 
+      const sortBooks = booksFromAPI.sort((a, b) => {
+        return a.title-b.title
+      })
+      setBooks(sortBooks);
     });
   };
 
@@ -42,17 +47,21 @@ export const BookList = () => {
 
   return (
     <>
-      <section className="event-section-content">
+        
+        <span className="page-title">Browse Books</span>
+        <div className="addButton-container">
         <button
           type="button"
-          className="btn"
+          className="add-button"
           onClick={() => {
             history.push("/bookdata/add");
           }}
         >
-          + book
+          new book
         </button>
-      </section>
+        </div>
+
+
 
       <div className="container-bookCards">
         {books.map((book) => (

@@ -1,46 +1,32 @@
-.bookForm {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-.form-style {
-  
+.library-card {
+  display: flex;
   background-color: #ff5e6c;
   margin: 1em;
   border-radius: 0.5em;
-  padding: 1em;
+  padding: 0em;
+  padding-left: 1em;
   color: white;
-  width: 70em;
+  width: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-fieldset {
-    border-style: none;
+.libraryCard-content {
+    display: flex;
+    align-items: center;
 }
 
-label {
-    font-size: 25px;
+.library-bookName {
     font-weight: bold;
+    font-size: 20px;
+    margin-right: 1em;
 }
 
-input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border-radius: .5em;
-  box-sizing: border-box;
+.library-authorName {
+    font-size: 18px;
+    margin-right: 1em;
 }
 
-input[type=text]:focus {
-    border: 3px solid #feb300;
-  }
-.bookFormButton-container{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.add-button {
+.library-button {
     display: flex;
     border: none;
     padding: 0.7em 1.4em;
@@ -53,9 +39,14 @@ input[type=text]:focus {
     text-align: center;
     position: relative;
     color: #ffffff;
-    background-color: #FFAAAB;
-  }
-  
-  .add-button:hover {
+    background-color: #ffaaab;
+}
+
+.library-button:hover {
     background-color: #feb300;
   }
+
+.libraryButton-container {
+  display: flex;
+  justify-content: flex-end;  
+}

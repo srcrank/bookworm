@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { authApi, userStorageKey } from "./authSettings"
-import "./Login.css"
+import "./Register.css"
 
 export const Register = () => {
 
@@ -66,23 +66,27 @@ export const Register = () => {
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Application Name</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Register an Account</h1>
                 <fieldset>
-                    <label htmlFor="firstName"> First Name </label>
-                    <input type="text" name="firstName" id="firstName" className="form-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
+                    {/* <label htmlFor="firstName"> First Name </label> */}
+                    <input type="text" name="firstName" id="firstName" className="loginForm-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
-                    <input type="text" name="lastName" id="lastName" className="form-control" placeholder="Last name" required value={registerUser.lastName} onChange={handleInputChange} />
+                    {/* <label htmlFor="lastName"> Last Name </label> */}
+                    <input type="text" name="lastName" id="lastName" className="loginForm-control" placeholder="Last name" required value={registerUser.lastName} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
-                    <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
+                    {/* <label htmlFor="inputEmail"> Email address </label> */}
+                    <input type="email" name="email" id="email" className="loginForm-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Sign in </button>
+                    <button className="login-button" type="submit"> Sign up </button>
                 </fieldset>
             </form>
+            <section className="link--signUp">
+                <p>Already have an account?{` `}</p>
+                <Link className= "signUp-Link" to="/login">{" "}Log In</Link>
+            </section>
         </main>
     )
 }

@@ -1,30 +1,30 @@
-.bookCard {
-  display: inline-block;
-  background-color: #ff5e6c;
-  margin: 1em;
-  border-radius: 0.5em;
-  padding: 1em;
+.goal-card {
+  display: flex;
+  background-color: #ffaaab;
+  margin: 5em;
+  border-radius: 2em;
+  padding: 2em;
   color: white;
-  width: 25em;
+  width: 45em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.BookTitle {
-margin-left: .2em;
-font-size: 23px;
+.goalCard-Name {
+  margin-left: 0.2em;
+  font-size: 23px;
 }
 
-.book-AuthorName {
-    margin-left: 2em;
-    font-size: 18px;
+.goalCard-Description {
+  margin-left: 2em;
+  font-size: 18px;
 }
 
-.button-container {
+.goalButton-container {
   display: flex;
   width: 18em;
 }
 
-.book-button {
+.goal-button {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -42,6 +42,6 @@ font-size: 23px;
   background-color: #abb761;
 }
 
-.book-button:hover {
+.goal-button:hover {
   background-color: #feb300;
 }

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams } from "react-router-dom";
 import { updateGoal, getGoalById } from "../../../data/GoalManager";
 import { getAllGoals } from "../../../data/GoalManager";
 import { getAllUsers } from "../../../data/UserManager";
+import "./GoalEditForm.css";
 
 export const GoalEditForm = () => {
   const [goal, setGoal] = useState({});
@@ -13,20 +14,20 @@ export const GoalEditForm = () => {
 
   const [users, setUsers] = useState([]);
 
-  const handleFieldChange = evt => {
+  const handleFieldChange = (evt) => {
     const stateToChange = { ...goal };
-    let selectedVal = evt.target.value
+    let selectedVal = evt.target.value;
     if (evt.target.id.includes("Id")) {
-      selectedVal = parseInt(selectedVal)
+      selectedVal = parseInt(selectedVal);
     }
     // look in the animal object copy and find the id of the key we are looking for
-    stateToChange[evt.target.id] = selectedVal
+    stateToChange[evt.target.id] = selectedVal;
     setGoal(stateToChange);
   };
 
-  const updateExistingGoal = evt => {
-    evt.preventDefault()
-        setIsLoading(true);
+  const updateExistingGoal = (evt) => {
+    evt.preventDefault();
+    setIsLoading(true);
 
     // This is an edit, so we need the id
     const editedGoal = {
@@ -35,40 +36,41 @@ export const GoalEditForm = () => {
       description: goal.description,
       completion: goal.completion,
       userId: goal.userId,
-      isCompleted: false
+      isCompleted: false,
     };
 
-    const userId = goal.userId
+    const userId = goal.userId;
 
-    if (userId === 0 ) {
-      window.alert("Please fill out all fields")
+    if (userId === 0) {
+      window.alert("Please fill out all fields");
     } else {
-      updateGoal(editedGoal)
-        .then(() => history.push("/")  //! Something Here
-      )
+      updateGoal(editedGoal).then(
+        () => history.push("/") //! Something Here
+      );
     }
-  }
+  };
 
   useEffect(() => {
-    getGoalById(goalId)
-      .then(goal => {
-        setGoal(goal);
-            setIsLoading(false);
-      });
+    getGoalById(goalId).then((goal) => {
+      setGoal(goal);
+      setIsLoading(false);
+    });
   }, [goalId]);
 
   useEffect(() => {
-    getAllUsers()
-      .then(usersFromAPI => {
-        setUsers(usersFromAPI)
-      });
+    getAllUsers().then((usersFromAPI) => {
+      setUsers(usersFromAPI);
+    });
   }, []);
 
   return (
     <>
-      <form>
+      <form className="goalForm">
+      <h2 className="goalForm_title">Edit your Goal</h2>
+            <div className="goalForm-style">
         <fieldset>
           <div className="formgrid">
+            <label htmlFor="name">Goal Name:</label>
             <input
               type="text"
               required
@@ -77,8 +79,8 @@ export const GoalEditForm = () => {
               id="name"
               value={goal.name}
             />
-            <label htmlFor="name">Goal Name</label>
 
+            <label htmlFor="description">Notes:</label>
             <input
               type="text"
               required
@@ -87,9 +89,9 @@ export const GoalEditForm = () => {
               id="description"
               value={goal.description}
             />
-            <label htmlFor="description">notes:</label>
 
             {/* DATE EDITING */}
+            <label htmlFor="completion">Completion Goal</label>
             <input
               type="date"
               required
@@ -98,8 +100,6 @@ export const GoalEditForm = () => {
               id="completion"
               value={goal.completion}
             />
-            <label htmlFor="completion">Completion Goal</label>
-
 
             {/* <select
               value={task.userId}
@@ -115,17 +115,20 @@ export const GoalEditForm = () => {
               ))}
             </select>
             <label htmlFor="user">Task Posted By: </label> */}
-
           </div>
-          <div className="alignRight">
+          <div className="goalFormButton-container">
             <button
-              type="button" disabled={isLoading}
+              type="button"
+              disabled={isLoading}
               onClick={updateExistingGoal}
-              className="btn btn-primary"
-            >Save</button>
+              className="editGoal-button"
+            >
+              Save
+            </button>
           </div>
         </fieldset>
+        </div>
       </form>
     </>
   );
-}
+};

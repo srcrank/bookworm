@@ -1,13 +1,24 @@
+.navbar-container {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+
 .navbar {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
 }
 
 .navbar__item {
-    flex-basis: 10%;
+    margin-left: 50px;
+    margin-right: 100px;
     list-style-type: none;
-    height: 150px;
+    height: 75px;
+}
+
+.logo-nav {
+    height: auto;
+    width: 15em;
+    margin-left: 0;
 }
 
 .navbar__link {
@@ -15,7 +26,7 @@
     color: #310D0D;
     margin-top: 10em;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.3em;
     text-align: center;
 }
 
@@ -24,7 +35,7 @@
     color: #FF5E6C;
     padding-top: 10em;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 .logo-text {
@@ -35,14 +46,32 @@
     margin: 2em;
 }
 
+/* .logout-container {
+    display: flex;
+    justify-content: flex-end;
+} */
+
 .navbar__linkLogout {
+    display: flex;
+    justify-content: flex-end;
     text-decoration: none;
     color: #310D0D;
     font-size: small;
+    font-weight: bold;
+    padding: 0.5em 1em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  font-weight: 400;
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+  text-align: center;
+  /* position: ; */
+  color: #ffffff;
+  background-color: #FF5E6C;
 }
 
 .navbar__linkLogout:hover {
-    text-decoration: underline;
+    background-color: #f87681;
 }
 
 .logo-image{
