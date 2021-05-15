@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { getAllUsers } from '../../../data/UserManager'
-import { addRec } from '../../../data/RecommendManager'
+// import { addRec } from '../../../data/RecommendManager'
 import "./RecForm.css"
 
-export const RecForm = () => {
+export const RecForm = ({handleClickSaveRec}) => {
     const currentUser = JSON.parse(sessionStorage.getItem("bookworm_user"))
     
     const [recommendation, setRecommendation] = useState({
-        userId: parseInt(sessionStorage.getItem("bookworm_user")),
+        userId: currentUser,
         message: "",
         timestamp: new Date().toLocaleString()
     })
@@ -29,10 +29,7 @@ export const RecForm = () => {
         setRecommendation(newRec)
     } 
 
-    const handleClickSaveRec = (event) => {
-        event.preventDefault()
-        addRec(recommendation).then(() => history.push("/recommend"))
-    }
+    
 
     useEffect(() => {
         getAllUsers().then(usersFromAPI => {
