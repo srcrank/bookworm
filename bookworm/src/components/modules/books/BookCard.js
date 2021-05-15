@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import './BookCard.css'
 
-export const BookCard = ({ book, handleDeleteBooks, user }) => {
+export const BookCard = ({ book, handleDeleteBooks, handleAddBooks, user }) => {
   const history = useHistory();
   if (user.isAdmin) {
     return (
@@ -33,7 +33,7 @@ export const BookCard = ({ book, handleDeleteBooks, user }) => {
         </h3>
         <p className="book-AuthorName">{book.author}</p>
         <div className="button-container">
-        <button className="book-button" type="button" onClick={() => history.push(`/library`)}>
+        <button className="book-button" type="button" onClick={() => handleAddBooks(book.id)}>
           {" "}
           Add to Library{" "}
         </button>
