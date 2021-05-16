@@ -27,7 +27,7 @@ export const Goals = () => {
 
   //delete goals button
   const handleDeleteGoal = (id) => {
-    deleteGoal(id).then(() => getGoalByUser().then(setGoals));
+    deleteGoal(id).then(() => getUserGoals(currentUser));
   };
 
   //switch goal from incomplete to complete. Is this where I might be able to push the goals to a separate tab for completed goals?
@@ -41,7 +41,7 @@ export const Goals = () => {
       completion: incompleteGoal.completion,
       isCompleted: true,
     };
-    updateGoal(completeGoal).then(() => getGoalByUser().then(setGoals));
+    updateGoal(completeGoal).then(() => getUserGoals(currentUser));
   };
 
   useEffect(() => {
