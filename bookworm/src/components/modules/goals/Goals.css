@@ -1,13 +1,41 @@
 .goalSection-content {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
-/* 
-.goalContainer-Cards {
+.goals-Spacing {
+    width: 100px;
+  }
+
+.goalTitle-description {
     display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
 }
 
-.goalCompletedContainer-Cards {
+.goalPage-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.goalCard-Section {
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.complete-title {
     display: flex;
-} */
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.incomplete-title {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}

@@ -64,6 +64,9 @@ export const Goals = () => {
   return (
     <>
       <section className="goalSection-content">
+      <span className="goals-Spacing"></span>
+      <span className="goalPage-title">Reading Goals</span>
+      <div className="addButton-container">
         <button
           type="button"
           className="goal-button"
@@ -73,10 +76,16 @@ export const Goals = () => {
         >
           + add goal
         </button>
+        </div>
       </section>
+      <div className="goalTitle-description">
+      <span className="goalPage-description">Keep track of your completed and not completed reading goals! </span>
+
+      </div>
       {goals.length > 0 ? ( 
         <div className="goalCard-Section"> 
-          <div className="goalContainer-Cards">
+          <div className="goalCompleteContainer-Cards">
+          <span className="complete-title">Completed Goals</span>
             {completedGoals.map((completeGoal) => (
               <GoalCard
                 key={completeGoal.id}
@@ -86,6 +95,7 @@ export const Goals = () => {
             ))}
           </div>
           <div className="goalIncompleteContainer-Cards">
+          <span className="incomplete-title">Active Goals</span>
             {notCompletedGoals.map((incompleteGoal) => (
               <GoalCard
                 key={incompleteGoal.id}
