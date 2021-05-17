@@ -13,18 +13,24 @@ export const LibraryCard = ({ book, handleDeleteLibItem, editLibStatus}) => {
     return (
     <div className="library-card">
     <div className="libraryCard-content">
+        
+        <div className="bookDiv">
         <span className="library-bookName">{book.title}</span>
             <p className="library-authorName">{book.author}</p>
-            {/* <span className="library-status"> {lib.status} </span> */}
+            </div>
+
+            <div className="statusDiv">
             <select name="status" className="status-dropdown" value={book.status} onChange={(evt) => editLibStatus(evt, book.libId)} >
-                <option value="reading">reading</option>
-                <option value="completed">completed</option>
-                <option value="on hold">on hold</option>
-                <option value="plan to read">plan to read</option>
+                <option value="reading">Reading</option>
+                <option value="completed">Completed</option>
+                <option value="on hold">On Hold</option>
+                <option value="plan to read">Plan to Read</option>
                 </select>
             <div className="libraryButton-container">
             <button className="library-button" type="button" onClick={() => handleDeleteLibItem(book.libId)}>delete</button>
+            </div>
          </div>
+
          </div>
     </div>
     )

@@ -21,12 +21,13 @@ font-size: 23px;
 
 .button-container {
   display: flex;
-  width: 18em;
+  justify-content: flex-end;
+  /* width: 18em; */
 }
 
 .book-button {
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
   border: none;
   padding: 0.7em 1.4em;

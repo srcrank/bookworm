@@ -1,12 +1,21 @@
+.pageHead-container {
+  display: flex;
+  justify-content: space-between;
+}
 .page-title {
     font-size: 2em;
     font-weight: bold;
-    margin: 0 0 0 .5em;
+    /* margin: 0 0 0 .5em; */
+
+}
+
+.bookList-Spacing {
+  width: 100px;
 }
 
 .addButton-container {
     display: flex;
-    margin: 0 0 0 92%;
+    /* margin: 0 0 0 92%; */
   }
   
   .add-button {
