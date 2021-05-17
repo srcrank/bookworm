@@ -2,6 +2,12 @@
     display: flex;
 }
 
+.recCard-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100em;
+}
+
 .rec {
     display: flex;
     align-items: center;
@@ -58,35 +64,19 @@ span.message {
     background-color: #feb300;
   }
 
-
-  /* button for editing and deleting comments. */
-  .EditDeleteButton-Container {
-      display: flex;
+  #recDeleteIcon {
+    cursor: pointer;
+    color: #abb761;
   }
 
-  .rec-EdDeButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    padding: 0.7em;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.5em;
-    width: 4em;
-    
-    box-sizing: border-box;
-    text-decoration: none;
-    font-size: 10px;
-    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
-    text-align: center;
-    /* position: relative; */
-    color: #ffffff;
-    background-color: #abb761;
-    height: 3.5em;
-    font-weight: bold;
-
+  #recDeleteIcon:hover {
+    color: #feb300;
   }
   
-  .rec-EdDeButton:hover {
-    background-color: #feb300;
+
+  /* button for editing and deleting comments. */
+  .DeleteButton-Container {
+      display: flex;
+      align-items: center;
+      font-size: .65em;
   }
