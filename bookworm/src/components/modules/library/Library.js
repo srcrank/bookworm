@@ -9,6 +9,7 @@ import {
 } from "../../../data/LibManager";
 import { useHistory } from "react-router-dom";
 import { deleteBook, getBookById } from "../../../data/BookManager";
+import "./Library.css"
 
 export const Library = () => {
   const [libItems, setLib] = useState([]);
@@ -58,6 +59,10 @@ export const Library = () => {
 
   return (
     <>
+    <div className="libPage-Head">
+      <span className="libPage-title">Library</span>
+      <span className="libDescription">Keep track of the books you've read, are planning to read, or have already finished!</span>
+    </div>
       <div className="container-libCards">
         {books.map((book) => (
           <LibraryCard

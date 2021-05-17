@@ -39,6 +39,10 @@ export const RecList = () => {
 
     return (
         <>
+        <div className="recPage-Head">
+      <span className="recPage-title">Recommendation Forum</span>
+      <span className="recDescription">Chat with other users and get some new book recommendations!</span>
+    </div>
             <div className="recContainer-Cards">
                 <div className="recScreen">
                 {recommendations.map(rec => 

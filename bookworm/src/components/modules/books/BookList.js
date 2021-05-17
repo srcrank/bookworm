@@ -49,6 +49,8 @@ export const BookList = () => {
 
   return (
     <>
+      <div className="pageHead-container"> 
+      <span className="bookList-Spacing"></span>
       <span className="page-title">Browse Books</span>
       <div className="addButton-container">
         <button
@@ -60,6 +62,7 @@ export const BookList = () => {
         >
           new book
         </button>
+      </div>
       </div>
 
       <div className="container-bookCards">

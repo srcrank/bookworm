@@ -4,6 +4,11 @@ import "./NavBar.css";
 import Logo from "./BKWRMwormlogo.png";
 
 export const NavBar = () => {
+  
+  const logOutClear = () => {
+    sessionStorage.removeItem("bookworm_user")
+  }
+
   return (
     <div className="navbar-container">
       
@@ -44,7 +49,7 @@ export const NavBar = () => {
 
       <div className="logout-container">
       <ul className="navbar__logout">
-        <Link className="navbar__linkLogout" to="/login">
+        <Link className="navbar__linkLogout" onClick={logOutClear} to="/login">
           Log Out
         </Link>
       </ul>
