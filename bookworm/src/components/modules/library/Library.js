@@ -3,21 +3,24 @@ import { LibraryCard } from "./LibraryCard";
 import {
   getUsersLibrary,
   deleteBookInLib,
-  getLibrary,
+  // getLibrary,
   getLibItemById,
   updateLibItem,
 } from "../../../data/LibManager";
-import { useHistory } from "react-router-dom";
-import { deleteBook, getBookById } from "../../../data/BookManager";
+// import { useHistory } from "react-router-dom";
+import { getBookById } from "../../../data/BookManager";
 import "./Library.css"
 
+
+//function that displays all library cards onto the DOM. 
 export const Library = () => {
-  const [libItems, setLib] = useState([]);
+  // const [libItems, setLib] = useState([]);
   const [books, setBooks] = useState([]);
 
-  const history = useHistory();
+  // const history = useHistory();
   const currentUserId = parseInt(sessionStorage.getItem("bookworm_user"));
 
+  //function retrieves the library of the current logged in user. Then each library object is used to access the corresponding books. 
   const getUserLib = () => {
     return getUsersLibrary(currentUserId).then((results) => {
       if (results.length > 0) {
