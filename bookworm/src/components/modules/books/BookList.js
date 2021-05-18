@@ -25,39 +25,6 @@ export const BookList = () => {
     })
   };
 
-/*
-{
-  "id": 1,
-  "userId": 1,
-  "bookId": 1,
-  "status": "plan to read"
-},
-{
-  "id": 1,
-  "title": "A Strange Country",
-  "author": "Muriel Barbery"
-},
-
-  const getUserLib = () => {
-    return getUsersLibrary(currentUserId).then((results) => {
-      if (results.length > 0) {
-        let promises = results.map((item) => {
-          return getBookById(item.bookId).then((bookData) => {
-            bookData.status = item.status;
-            bookData.libId = item.id;
-            return bookData;
-          });
-        });
-        Promise.all(promises).then((bookData) => {
-          setBooks(bookData);
-        });
-      } else {
-      }
-    });
-  };
-*/
-
-
   const getCurrentUser = () => {
     getUserById(currentUserId).then((user) => {
       setUser(user);
@@ -95,7 +62,7 @@ export const BookList = () => {
             history.push("/bookdata/add");
           }}
         >
-          new book
+          New Book
         </button>
       </div>
       </div>
