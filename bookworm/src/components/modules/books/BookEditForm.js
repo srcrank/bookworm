@@ -90,7 +90,7 @@ export const BookEditForm = () => {
 
             <button className="add-button"
                 onClick={updateExistingBook} disabled={isLoading}>
-                update book
+                Update Book
             </button>
             </div>
         </form>

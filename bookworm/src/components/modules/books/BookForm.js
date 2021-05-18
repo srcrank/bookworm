@@ -94,7 +94,7 @@ export const BookForm = () => {
             onClick={handleClickSaveBook}
             disabled={isLoading}
           >
-            + add book
+            Add Book
           </button>
         </div>
       </div>
