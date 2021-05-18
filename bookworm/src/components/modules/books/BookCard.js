@@ -16,11 +16,17 @@ export const BookCard = ({ book, handleDeleteBooks, handleAddBooks, user }) => {
         <button className="book-button" type="button"
           onClick={() => history.push(`/bookdata/${book.id}/edit`)}
         >
-          edit
+          <div className="tooltip">
+            <span class="tooltiptext-Edit">Edit</span>
+            <i className="fas fa-pen"></i>
+            </div>
         </button>
         {/* add an if statement here so that only admins can delete or edit books */}
         <button className="book-button" type="button" onClick={() => handleDeleteBooks(book.id)}>
-          delete
+        <div className="tooltip">
+            <span class="tooltiptext-Del">Delete</span>
+            <i className="fas fa-trash-alt"></i>
+            </div>
         </button>
         </div>
       </div>

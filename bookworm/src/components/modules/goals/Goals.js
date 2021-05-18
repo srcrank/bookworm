@@ -74,7 +74,7 @@ export const Goals = () => {
             history.push("/goals/create");
           }}
         >
-          + add goal
+          Add Goal
         </button>
         </div>
       </section>

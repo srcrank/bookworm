@@ -27,7 +27,12 @@ export const LibraryCard = ({ book, handleDeleteLibItem, editLibStatus}) => {
                 <option value="plan to read">Plan to Read</option>
                 </select>
             <div className="libraryButton-container">
-            <button className="library-button" type="button" onClick={() => handleDeleteLibItem(book.libId)}>delete</button>
+            <button className="library-button" type="button" onClick={() => handleDeleteLibItem(book.libId)}>
+                <div className="tooltip">
+                <span class="tooltiptext-Del">Delete</span>
+                <i className="fas fa-trash-alt"></i>
+                </div>
+            </button>
             </div>
          </div>
 

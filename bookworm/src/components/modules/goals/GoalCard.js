@@ -43,9 +43,9 @@ export const GoalCard = ({ goal, handleDeleteGoal, handleCompleteGoal }) => {
             onClick={() => handleDeleteGoal(goal.id)}
           >
             <div className="tooltip">
-            <span class="tooltiptext-Delete">Edit</span>
+            <span class="tooltiptext-Del">Delete</span>
+            <i className="fas fa-trash-alt"></i>
             </div>
-            <i class="fas fa-trash-alt"></i>
           </button>
         ) : (
           ""
