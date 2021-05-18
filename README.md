@@ -21,6 +21,6 @@ The user can, once registered, set goals for themselves, add books to the databa
 # ERD
 ![image](https://user-images.githubusercontent.com/76709907/118606840-7bc16900-b77d-11eb-814b-708bd2c70db8.png)
 
-#WireFrame
+# WireFrame
 ![image](https://user-images.githubusercontent.com/76709907/118606744-60eef480-b77d-11eb-9f19-a8a51c1f4423.png)
 
